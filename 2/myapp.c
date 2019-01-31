@@ -24,6 +24,12 @@
 #include <stdio.h>
 int main()
 {
-   printf("Hello, people!\n");
+   #ifdef AWESOME
+      char *message = "YOU ARE AWESOME!\n";
+   #else
+      char *message = "Sorry, you are not awesome\n";
+   #endif
+   printf("%s", message);
+
    return 0;
 }

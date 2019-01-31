@@ -25,3 +25,10 @@ project(example)
 add_executable(my_app
     "${CMAKE_CURRENT_SOURCE_DIR}/myapp.c"
 )
+
+# Usually, the compile definitions are set in a "Project options" file. Doing
+# that, your code will be more "platform independent"
+target_compile_definitions(my_app
+    PRIVATE
+        AWESOME
+)

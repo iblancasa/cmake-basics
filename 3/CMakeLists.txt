@@ -23,5 +23,10 @@ cmake_minimum_required(VERSION 3.5)
 project(example)
 
 add_executable(my_app
-    "${CMAKE_CURRENT_SOURCE_DIR}/myapp.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/myapp.c"
+)
+
+target_include_directories(my_app
+    PRIVATE
+        "${CMAKE_CURRENT_SOURCE_DIR}/include"
 )
